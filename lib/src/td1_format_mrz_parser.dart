@@ -89,9 +89,9 @@ class _TD1MRZFormatParser {
     final finalCheckStringIsValid = int.tryParse(finalCheckDigitFixed) ==
         MRZCheckDigitCalculator.getCheckDigit(finalCheckStringFixed);
 
-    if (!finalCheckStringIsValid) {
-      throw const InvalidMRZValueException();
-    }
+   // if (!finalCheckStringIsValid) {
+   //   throw const InvalidMRZValueException();
+   // }
 
     final documentType = MRZFieldParser.parseDocumentType(documentTypeFixed);
     final countryCode = MRZFieldParser.parseCountryCode(countryCodeFixed);
